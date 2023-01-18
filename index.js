@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(multer().any());
 
 
-mongoose.connect('mongodb://127.0.0.1:27017/myapp');
+mongoose.connect(process.env.MONGODB_URI);
 
 app.use("/",route);
 
